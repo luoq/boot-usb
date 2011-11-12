@@ -1,0 +1,46 @@
+color cyan/black black/light-gray green/black yellow/black
+
+title ..
+configfile /ubcd/menus/grub4dos/main.lst
+
+title CPU Burn-in V1.00\n Heats up any x86 CPU to the maximum possible operating temperature that is\n achievable by using ordinary software. This allows the user to adjust the CPU\n speed up to the practical maximum while still being sure that stability is\n achieved even under the most stressful conditions.
+kernel /pmagic/pmagic/bzImage root=/dev/ram0 ramdisk_size=12000 noapic quiet ubcdcmd=cpuburn
+initrd /ubcd/boot/cpustress/initrd.gz
+map --unmap=0:0xff
+
+title CPUinfo\n Gives info about your CPU: number of processors, vendor, CPU family, CPU model\n name, CPU speed, cache size, possible construction bugs of your cpu, which\n extensions (flags) your CPU supports.
+kernel /pmagic/pmagic/bzImage root=/dev/ram0 ramdisk_size=12000 noapic quiet ubcdcmd=cpuinfo
+initrd /ubcd/boot/cpustress/initrd.gz
+map --unmap=0:0xff
+
+title Intel Processor Frequency ID V7.2 (P3 and below)\n Reports information about your Intel CPU, including brand name, rated and\n tested speed, cache memory, technologies and classification. Supports older\n Intel CPU (P3 and below).
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title Intel Processor Identification Utility V4.32 (P4 and above)\n Reports information about your Intel CPU. Supports newer Intel CPU (P4 and\n above).
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title Mersenne Prime Test V24.14\n Mersenne Prime Search program that stresses the CPU.
+kernel /pmagic/pmagic/bzImage root=/dev/ram0 ramdisk_size=12000 noapic quiet ubcdcmd=mprime24
+initrd /ubcd/boot/cpustress/initrd.gz
+map --unmap=0:0xff
+
+title Stress V1.00\n Simple workload generator for POSIX systems. It imposes a configurable amount\n of CPU, memory, I/O, and disk stress on the system. This menu item launches\n stress with the "--help" parameter that displays all possible options. You\n need to run it again with the stress test options that you prefer.
+kernel /pmagic/pmagic/bzImage root=/dev/ram0 ramdisk_size=12000 noapic quiet ubcdcmd=stress cmdstress="--help"
+initrd /ubcd/boot/cpustress/initrd.gz
+map --unmap=0:0xff
+
+title StressCPU V2.0 (requires CPU with SSE)\n Torture-test your CPU in order to make sure that you don't have overheating\n problems. Requires SSE-equipped x86 CPUs. Executes a special version of the\n Gromacs innerloops that mixes SSE and normal assembly instructions to heat\n your CPU as much as possible.
+kernel /pmagic/pmagic/bzImage root=/dev/ram0 ramdisk_size=12000 noapic quiet ubcdcmd=stresscpu2
+initrd /ubcd/boot/cpustress/initrd.gz
+map --unmap=0:0xff
+
+title x86test V0.10a\n Displays information about the processor in an x86/PC system. Identifies the\n vast majority of x86 CPUs and their current clock speed. For chips that\n support CPUID it will print as much useful information as it can, including\n detailed cache configuration where possible.
+kernel /ubcd/boot/x86test/x86test
+map --unmap=0:0xff
+

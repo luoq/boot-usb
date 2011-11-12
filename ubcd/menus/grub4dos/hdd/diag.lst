@@ -1,0 +1,131 @@
+color cyan/black black/light-gray green/black yellow/black
+
+title ..
+configfile /ubcd/menus/grub4dos/hdd.lst
+
+title ATA Diagnostic Tool V7.0 (Fujitsu)\n Diagnose your suspected faulty hard drive by checking the S.M.A.R.T. data and\n also by scanning the entire surface of the drive, sector by sector, to verify\n media integrity.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title DLG Diagnostic V4.15 (Western Digital)\n Diagnostic tools for older WD EIDE drives starting with the model number\n ACxxx. It allows you to test the drive, print results for last drive tested,\n repair errors found during the Test Drive option and write zeros to the drive.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title DLG Diagnostic V5.19 (Western Digital)\n Diagnostic tools for hard drives larger than 8.4 GB with the model number\n starting with WDxxx.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title Drive Fitness Test V4.16 (IBM/Hitachi)\n Quickly and reliably tests SCSI, IDE and SATA drives. For Ultrastar 10K300,\n Ultrastar 15K73 and DK32XX, use the OGT Diagnostic Tool (Windows only). Does\n not support Microdrive Digital Media products. Supports all Travelstar HDDs,\n except 8E, 10E and C4K series. Does not support external USB/Firewire drives.
+map --mem /ubcd/images/dft.img.gz (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+
+title ES-Tool V3.01v (Samsung)\n Diagnostic tool for Samsung hard drives. Includes functions for low-level\n format, UDMA mode/automatic acoustic management, enable/disable SMART etc.\n This is the newer version of HUTIL, which is in turn the newer version of\n SHDIAG.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title ESTest V4.50 (ExcelStor)\n Diagnostic utility for IDE and SATA drives. Supports ExcelStor drives up to\n 160GB capacity.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title GWSCAN V3.15 (Gateway)\n Older version of GWSCAN recommended for IDE hard drives 10GB or smaller.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title GWSCAN V5.12 (Gateway)\n Gateway-provided IDE hard disk utility used to verify that the disk is\n defect-free.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title HDAT2 V4.5.3\n Diagnostic tool for ATA/ATAPI/SATA (SATA with NCQ) and SCSI/USB devices.\n Performs both drive and filesystem level testing. This includes testing and\n repair of bad sectors, checking of MBR, directories etc (FAT12/16/32\n partitions) as well as checking/removal of bad sectors flags in FAT table.
+map --mem /ubcd/images/hdat2-453.img.gz (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+
+title HDAT2 V4.8.1\n Latest version of HDAT2, but device-level testing is disabled. This issue is\n planned to be resolved in V4.9. In the mean time, use V4.5.3 for device-level\n testing.
+map --mem /ubcd/images/hdat2.img.gz (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+
+title HUTIL V1.21 (Samsung)\n Older version of HUTIL. Will not work with newer Samsung drive models. Faster\n operation and function to view SMART values.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title HUTIL V2.10 (Samsung)\n Diagnosis progam for the following drives: SpinPoint F1, F1 CE, F1 RAID, S250,\n S250 CE, N2, N1, M5, MH80S, S166, T166, T133, P80SDH, P80SD, M80, M60, P80VEM,\n P80VEA, P80M, P80A, P120, V120, M40, P80, V80, VL40, PL40, V60, P40, V40, V30,\n P20, V20400. Check Samsung website for applicable model numbers.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title MHDD32 V4.5\n Older version of MHDD32 that supports ATA/SCSI Terminal for scripting.
+map --mem /ubcd/images/mhdd45.img.gz (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+
+title MHDD32 V4.6\n Tool for working with hard drives at the lowest possible level. You can use it\n to diagnose your drive, access raw sectors, manage SMART and other drive\n parameters such as acoustic management, security, host protected area etc.\n Supports IDE, SATA and SCSI hard drives.
+map --mem /ubcd/images/mhdd46.img.gz (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+
+title PowerMax V4.09 (Maxtor/Quantum)\n Perform diagnostic read/write verifications on Maxtor/Quantum hard drives.\n Effective on all ATA (IDE) hard drives with a capacity >= 500 MB. This is an\n older, uncrippled version that works with non-Maxtor hard drives.
+map --mem /ubcd/images/powmx409.img.gz (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+
+title PowerMax V4.23 (Maxtor/Quantum)\n Perform diagnostic read/write verifications on Maxtor/Quantum hard drives.\n Effective on all ATA (IDE) hard drives with a capacity >= 500 MB. This is the\n last version before Maxtor was acquired by Seagate.
+map --mem /ubcd/images/powmx423.img.gz (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+
+title SCSIMax V1.21 (Maxtor/Quantum)\n Diagnostic tool for all Maxtor/Quantum SCSI hard drives supporting SMART.\n Supports all Maxtor and Quantum SCSI drives including: Atlas 15K, 10K, II,\n III, IV, 7200RPM IV, 7200RPM V and Viking II. Incompatible with SCSI Ultra320\n controllers.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title SeaTools for DOS V1.10 (Seagate/Maxtor)\n Text version. Test PATA/IDE/SATA drives by instructing the drive to run its\n built-in Drive Self Test (DST) and give either a pass or fail status.
+map --mem /ubcd/images/seatool1.img.gz (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+
+title SeaTools for DOS V2.23 (Seagate/Maxtor)\n GUI version. Test PATA/IDE/SATA drives by instructing the drive to run its\n built-in Drive Self Test (DST) and give either a pass or fail status.
+map --mem /ubcd/images/seatool2.img.gz (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+
+title SHDIAG V1.25 (Samsung)\n Diagnostic tool for the following drive models: SpinPoint V20400, V15300,\n V10200, V9100. Check Samsung website for applicable model numbers.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title ViVARD V0.4\n Low-level HDD diagnostic tool. Supports SATA, IDE/EIDE, SCSI hard drives. Big\n drives (LBA-48) are supported. Functions include surface test with optional\n remapping, erasing of specific sectors or entire drive, viewing of SMART\n attributes, drive condition report.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+

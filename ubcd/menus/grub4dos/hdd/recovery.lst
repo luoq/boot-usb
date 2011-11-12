@@ -1,0 +1,13 @@
+color cyan/black black/light-gray green/black yellow/black
+
+title ..
+configfile /ubcd/menus/grub4dos/hdd.lst
+
+title Offline NT Password & Registry Editor 110511\n Change password of any user that has a local account on WinNT/2K/XP/Vista\n without knowing the old password. Detect and unlock locked/disabled user\n accounts as well. Includes a limited registry editor.
+map --mem /ubcd/images/offntpassw.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+
+

@@ -1,0 +1,17 @@
+color cyan/black black/light-gray green/black yellow/black
+
+title ..
+configfile /ubcd/menus/grub4dos/main.lst
+
+title FileLink V3.01\n Permits file transfers between two computers at up to 115,200 baud, using a\n standard serial cable.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title Kon-Boot V1.0\n Log into Linux systems as root user without the password (using 'kon-usr').\n Also log into any password-protected profile on Windows systems (WinXP and\n above) without the password.
+map --mem /ubcd/images/konboot.img.gz (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+

@@ -1,0 +1,35 @@
+color cyan/black black/light-gray green/black yellow/black
+
+title ..
+configfile /ubcd/menus/grub4dos/main.lst
+
+title !BIOS V3.20\n Decrypt the passwords used in some most common BIOS (IBM, AMI, Award and\n Phoenix). Save/restore BIOS settings. Performs brutal attacks ("blasters")\n which remove passwords from a lot of BIOSes. CMOS hex editor.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title BIOS V1.35.0\n Display BIOS info. Save/restore BIOS settings. Find BIOS password for Award,\n AMI, Phoenix and AST BIOS.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title CMOSPWD V5.0\n Decrypt password stored in BIOS CMOS. Works with the following BIOS: ACER/IBM,\n AMI, AMI WinBIOS 2.5, Award 4.5x/4.6x/6.0, Compaq, Packard Bell,IBM (PS/2,\n Activa, Thinkpad), Phoenix, Gateway Solo, Toshiba, Zenith AMI etc.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title KEYDisk\n Reset CMOS password on Toshiba computers. If this doesn't work, you can try to\n build the Toshiba parallel loopback device. Details available at:\n http://www.cgsecurity.org/wiki/CmosPwd
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title WipeCMOS V1.2\n Clear all CMOS settings to recover from lost passwords or corrupt BIOS\n settings.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+

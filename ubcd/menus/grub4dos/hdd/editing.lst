@@ -1,0 +1,29 @@
+color cyan/black black/light-gray green/black yellow/black
+
+title ..
+configfile /ubcd/menus/grub4dos/hdd.lst
+
+title Disk Editor V3.0\n Disk editor for 12 and 16-bit FAT drives.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title DISKMAN4 V4.01\n Low-level tool for backup/restore of CMOS settings, manipulation of critical\n disk structures (MBR, partition records and boot sectors) etc.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title DiskSpy Free Edition V2.0 (Personal use only)\n Sector viewer. Search for ASCII character strings. Byte/word/dword views. 7-\n and 8-bit-view on ASCII display. Detailled display of HDD capabilities.
+map --mem /ubcd/images/diskspy.img.gz (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+
+title PTS DiskEditor V1.04\n Allows viewing and editing of fixed disks only. Supports both FAT16 and FAT32.\n Includes block copy-and-paste, undo, search for HEX/ASCII etc.
+map --mem /ubcd/images/ptsdedit.img.gz (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+

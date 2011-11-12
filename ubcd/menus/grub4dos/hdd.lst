@@ -1,0 +1,32 @@
+color cyan/black black/light-gray green/black yellow/black
+
+title ..
+configfile /ubcd/menus/grub4dos/main.lst
+
+title Boot Management
+configfile /ubcd/menus/grub4dos/hdd/bootmgmt.lst
+
+title Data Recovery
+configfile /ubcd/menus/grub4dos/hdd/recovery.lst
+
+title Device Info and Management
+configfile /ubcd/menus/grub4dos/hdd/devmgmt.lst
+
+title Diagnosis
+configfile /ubcd/menus/grub4dos/hdd/diag.lst
+
+title Disk Cloning
+configfile /ubcd/menus/grub4dos/hdd/cloning.lst
+
+title Disk Editing
+configfile /ubcd/menus/grub4dos/hdd/editing.lst
+
+title Disk Wiping
+configfile /ubcd/menus/grub4dos/hdd/wiping.lst
+
+title Installation
+configfile /ubcd/menus/grub4dos/hdd/install.lst
+
+title Partition Management
+configfile /ubcd/menus/grub4dos/hdd/partmgmt.lst
+

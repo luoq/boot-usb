@@ -1,0 +1,35 @@
+color cyan/black black/light-gray green/black yellow/black
+
+title ..
+configfile /ubcd/menus/grub4dos/main.lst
+
+title ATAPI CDROM Identification V2.22\n Display useful information about ATAPI CDROM drive: 1) Identify Device, 2)\n Drive Inquiry, 3) Mode Sense. On some older drives, you need to use the delay\n switch or miscellaneous switches. For example, 2-speed Vertos CD-ROM drive in\n old 386-Intel computer is only recognized with a switch <delay:1>.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title CD Index V1.1\n Generate relative performance index for CD-ROM drives, which converges towards\n a constant number based on seek time and data transfer rate for any specific\n drive/computer/disc combination.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title CHZ Monitor-Test V2.0\n Check for bad pixels on TFT monitors by displaying screens in different\n colors.
+map --mem /ubcd/images/tfttest.img.gz (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+
+title Parallel Port Information System V1.45\n Display the configuration of the parallel ports in your system. Resolve I/O\n address and IRQ contention problems. Measure the performance capabilities of\n your parallel ports. Experiment with your parallel port configuration.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title Video Memory Stress Test V1.7\n This test allow you to completely test your video RAM. Testing process\n contains two main stages: offscreen memory testing with displaying process on\n standart VMT interface, and framebuffer testing without any interface (screen\n will blink).
+map --mem /ubcd/images/vmtce.img.gz (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+

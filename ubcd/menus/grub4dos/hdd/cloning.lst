@@ -1,0 +1,42 @@
+color cyan/black black/light-gray green/black yellow/black
+
+title ..
+configfile /ubcd/menus/grub4dos/hdd.lst
+
+title CopyWipe V1.14\n Utility for copying or wiping entire hard drives. Supports USB and Firewire\n drives. Capable of copying only those areas of the source drive that are in\n use. Supports proportional resizing of partitions (FAT, FAT32, and NTFS) on\n the destination drive.
+map --mem /ubcd/images/copywipe.img.gz (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+
+title EaseUs Disk Copy V2.3.1\n Performs cloning of a hard disk or partition. Supports IDE, SATA, SCSI,\n Firewire and USB drives. Supports dynamic disks.
+map --mem /ubcd/images/diskcopy.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title g4u V2.4\n NetBSD-based distro that allows you to clone a hard disk by uploading a\n compressed image to a FTP server, and to restore from that image via FTP.\n Network configuration is performed via DHCP. Both cloning of harddisks as well\n as partitions are supported.
+map --mem /ubcd/images/g4u.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title HDClone V4.0.6 (Free Edition)\n Copies one hard disk to another. Supports IDE/ATA/SATA/SATA II/eSATA (AHCI) +\n USB 1.1/2.0 (UHCI, OHCI, EHCI). Free Edition limits transfer speed to 1GB/min.\n Clones only full HDDs (no partition-level support). Target HDD must be larger\n (not equal/smaller) than source. Supports 4k sector alignment.
+map --mem /ubcd/images/hdclone.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+
+title Partition Saving V3.90\n Copy, save and restore an entire hard disk or individual partitions. It is\n also able to update the Win2K/XP/Vista registry when a partition has been\n moved, update Vista's boot configuration file, write to an existing backup\n file in an NTFS partition from DOS, reset bad sectors in filesystem etc.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title PC INSPECTOR clone-maxx V1.0\n Hard disk cloning tool. Data transfer rate of up to 3.3GB/min via optimal\n utilization of the DMA chipset on PC motherboards with supported chipsets. The\n cloning process is performed at the disk level and is independent of the\n filesystem.
+map --mem /ubcd/images/clonemax.img.gz (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+

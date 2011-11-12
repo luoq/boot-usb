@@ -1,0 +1,44 @@
+color cyan/black black/light-gray green/black yellow/black
+
+title BIOS
+configfile /ubcd/menus/grub4dos/bios.lst
+
+title CPU
+configfile /ubcd/menus/grub4dos/cpu.lst
+
+title HDD
+configfile /ubcd/menus/grub4dos/hdd.lst
+
+title Memory
+configfile /ubcd/menus/grub4dos/memory.lst
+
+title Others
+configfile /ubcd/menus/grub4dos/others.lst
+
+title Peripherals
+configfile /ubcd/menus/grub4dos/periph.lst
+
+title System
+configfile /ubcd/menus/grub4dos/system.lst
+
+title UBCD FreeDOS R1.44 (Based on NwDsk V3.40)\n FreeDOS boot disk used to run many of the other DOS apps on the UBCD. Revised\n version of Eric Veermans' FreeDOS NwDsk 3.40. Addresses many bug fixes,\n performance enhancements and compatibility issues.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title User-defined
+configfile /ubcd/custom/custom.lst
+
+title
+pause
+
+title Reboot\n Reboot the PC.
+reboot
+
+title
+pause
+
+title ISOLINUX/SYSLINUX menu\n This entry will bring you back to the ISOLINUX/SYSLINUX menu.
+chainloader /boot/isolinux/isolinux.bin || chainloader +1
+

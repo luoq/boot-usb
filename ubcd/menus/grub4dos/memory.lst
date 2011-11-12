@@ -1,0 +1,41 @@
+color cyan/black black/light-gray green/black yellow/black
+
+title ..
+configfile /ubcd/menus/grub4dos/main.lst
+
+title AleGr MEMTEST V2.00\n RAM tester able to test up to 3GB under DOS. When FreeDOS boots, select one of\n the "Defensive" boot options. Then pass in the "/ignorexmm" parameter to\n memtest.exe. For example, to test 3GB memory, type "memtest 2900 1 /fastdetect\n /nousblegacy /ignorexmm" ("1" ignores first MB used by BIOS).
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title DIMM_ID V3.57\n Display DIMM sockets and SPD info for Intel PIIX4, PIIX4E, ICH0, ICH2 to 10,\n 6300ESB, ESB2, Ati SB450,7x0, ServerWorks SB4, VIA 82C686 & 8235, AMD-766,\n MCP68, SIS650/96x.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title Memtest86 V3.5b\n Previous version of Memtest86 that supports controller identification, PCI,\n DMI and reporting of correctable ECC errors.
+kernel /ubcd/boot/memtest86/mt86-35b.bin
+map --unmap=0:0xff
+
+title Memtest86 V4.0\n Thorough, stand alone memory test for x86 architecture computers. It executes\n a series of numbered test sections to check for errors. These test sections\n consist of a combination of test algorithm, data pattern and cache setting.\n The execution order is arranged so that errors will be detected rapidly.
+kernel /ubcd/boot/memtest86/memtest86.bin
+map --unmap=0:0xff
+
+title Memtest86+ V4.20\n A port of Memtest86 that is up-to-date and completly reliable, which is aimed\n at memory failures detection. Detects all current chipsets and displays useful\n information.
+kernel /ubcd/boot/memtest86p/memtest86p.bin
+map --unmap=0:0xff
+
+title TestMemIV\n Tests system memory and memory on Nvidia video cards.
+map --mem /ubcd/images/testmem4.img.gz (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+
+title Windows Memory Diagnostic\n Tests the Random Access Memory (RAM) on your computer for errors. Released by\n Microsoft to cater to users who are experiencing problems when running\n Windows.
+map --mem /ubcd/images/windiag.img.gz (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+

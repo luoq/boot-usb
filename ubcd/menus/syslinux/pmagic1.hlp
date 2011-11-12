@@ -1,0 +1,24 @@
+0f>> PAGE 107
+
+0fParted Magic07 has a very user-friendly interface. Most of the GUI apps can
+be launched from the start menu. For console apps, you can launch 0fRoxterm07
+and use the command prompt. Before running apps that require the network,
+you should run 0fStart Network07 first.
+
+0fSelection of avaible tools:07
+ - Partition / disk related tools:
+     Erase Disk, G4L, Gparted Partition Editor, Grsync, GSmart Control,
+     ISO Master, Partition Image, PhotoRec, Testdisk, UDPCast Disk Cloning
+ - Network related tools:
+     Firefox, FireFTP, gFTP, Grsync, LFTP, XChat IRC
+ - Antivirus tools:
+     ClamAV (clamscan and freshclam), F-prot (fpscan and fpupdate) and XFprot
+ - Filemanagers and related utilities:
+     Midnight Commander, Mount-gtk, PCMan File Manager, Search for Files of
+     Folders, Xarchiver
+ - Miscellaneous utilities:
+     Calender, Conky, Galculator, Hardware Lister, Leafpad, Roxterm,
+     Taskmanager, Take a screenshot, Xfburn
+
+<< Press 0f[F2]07 to continue to next page, any other key to return to menu >>
+

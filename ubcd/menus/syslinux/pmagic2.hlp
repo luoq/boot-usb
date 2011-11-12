@@ -1,0 +1,22 @@
+0f>> PAGE 207
+
+Two virus scanners 0fClamAV07 and 0fF-Prot Virus Scanner07 are available.
+
+To use them from the command prompt, type:
+
+  ClamAV: 0f~# clamscan --recursive <path>07
+  F-Prot: 0f~# fpscan <path>07
+
+To update the virus signatures, first connect to the Internet using 0fStart
+Network07.
+
+  ClamAV: 0f~# freshclam07
+  F-Prot: 0f~# fpupdate07
+
+A GUI wrapper for F-Prot Virus Scanner is also included under "Accessories".
+
+To find out the available devices/partitions, open 0fMount Devices07 on the
+desktop and start browsing. This also shows you the path (eg. 0f/usr/media/sda107)
+to use with applications such as 0fClamAV07 and 0fF-Prot Virus Scanner07.
+
+<< Press 0f[F1]07 to return to previous page, any other key to return to menu >>

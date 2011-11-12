@@ -1,0 +1,90 @@
+color cyan/black black/light-gray green/black yellow/black
+
+title ..
+configfile /ubcd/menus/grub4dos/hdd.lst
+
+title AMSET V4.00 (Maxtor)\n Changes acoustic management settings on certain Maxtor drive models, including\n DiamondMax 8/16, DiamondMax Plus 9/40/60/VL 30, D540X, D740X, Fireball 3.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title ATA Password Tool V1.1\n Tries to unlock hard disks that are locked at the ATA level. Choose "unlock\n with user password", then "disable with user password". The password is blank.\n If the above doesn't work, choose "unlock with master password", then "disable\n with master password". The password is all spaces.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title ATAINF V1.3\n Tool for viewing the parameters and capabilities of ATA, ATAPI and SCSI hard\n drives and CD-ROM drives.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title Change Definition Utility (for Fujitsu M16xx/M2915 HDDs)\n The Change Definition utility is designed to alter certain drive parameters\n (including Unit Attention, Bus Parity, and SCSI level) for the Fujitsu M16xx/\n M2915 family of SCSI drives.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title DiskCheck V4.0.6\n HDD performance and compatibility checker. Support IDE/SCSI HDDs. Support PIO/\n DMA modes.
+map --mem /ubcd/images/diskcheck.img.gz (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+
+title DISKINFO V1.02\n Display BIOS and ATA details of your drives.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title ESFeat V2.30 (ExcelStor)\n Allows you to set the maximum transfer rate of SATA drives, set the UDMA mode\n of IDE drives, use the Advance Acoustic Management feature for\n ExcelStordrives. This utility supports ExcelStor drives up to 160GB.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title Feature Tool V2.15 (IBM/Hitachi)\n Tool for changing various ATA features. It can modify certain features of\n Deskstar and Travelstar ATA hard disk drives and supports 48-bit addressing\n for new, large-capacity drives.
+map --mem /ubcd/images/ibmft.img.gz (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+
+
+title SMARTUDM V2.00\n Tool for viewing hard disk SMART values. SMARTUDM supports drives using\n external UDMA/SATA/RAID controllers (HPT/Promise/FastTrack).
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title UATA100 V3.06 (Seagate)\n This tool lets you set the Ultra ATA/100 drives to Ultra ATA/33 or Ultra ATA/\n 66 mode for better compatibility with a non-ATA/100 host controller or\n motherboard.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title UDMA Utility (for Fujitsu MPD/MPE/MPF series HDDs)\n This UDMA utility is designed to change the transfer mode of Fujitsu's MPD/MPE/\n MPF series hard disk drives to pre-set transfer rate for compatible operation.\n This is needed if you encounter intermittent UDMA failing with your\n motherboard.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title UDMA Utility (for Fujitsu MPG series HDDs)\n This UDMA utility is designed to change the transfer mode of Fujitsu's MPG\n series hard disk drives to pre-set transfer rate for compatible operation.\n This is needed if you encounter intermittent UDMA failing with your\n motherboard.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title Ultra ATA Manager June, 2003 (Western Digital)\n Enables/disables the Ultra ATA 33/66/100 capability on Western Digital EIDE\n drives that support this feature.
+map --mem /ubcd/images/dlgudma.img.gz (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+
+title WDIDLE3 V1.05 (Western Digital)\n Firmware upgrade tool that increases the head-park idle timer (or disables it)\n on the following WD HDDs: WD1000FYPS-01ZKB0, WD7500AYPS-01ZKB0,\n WD7501AYPS-01ZKB0. This potentially prevents the heads from parking\n excessively thus increasing its lifespan.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+

@@ -1,0 +1,72 @@
+color cyan/black black/light-gray green/black yellow/black
+
+title ..
+configfile /ubcd/menus/grub4dos/hdd.lst
+
+title Cute Partition Manager V0.9.8\n Lets you edit the boot flag, partition type and other advanced parameters, and\n preview the changes before you save them.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title Dsrfix V3.12\n Diagnostic and recovery tool for troubleshooting Dell System Restore problems.\n First run will tell you whether your system is a good candidate for restoring\n Dell's DSR feature. Rerun with "DSRFIX  /F" to start the actual repair.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title FIPS V2.0\n Interactive, non-destructive partition splitting program. When installing\n Linux on a PC that was used for DOS/Windows, many people want to retain a\n smaller partition for their DOS software. However, since most hard disks\n contain only one large partition, FIPS was created for this purpose.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title Free FDISK V1.3.1\n Supports HDDs up to 128GB. Includes BootEasy, a compact multiboot loader.\n Implements "standard" FDISK interface. Supports Non-DOS partition types.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+
+title Partinfo V1.11\n Display or capture detailed partition information from hard drives. It can be\n used to view and communicate the current partition layout of your drive(s) in\n exact detail so that partitioning problems can be diagnosed.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title Partition Resizer V1.3.4\n Resize and move partitions without data loss. Int13 extensions support allows\n handling of disks up to 2TB. Transparent extended partition resizing. Supports\n FAT32 but not NTFS partitions.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title Partition Saving V3.90\n Copy, save and restore an entire hard disk or individual partitions. It is\n also able to update the Win2K/XP/Vista registry when a partition has been\n moved, update Vista's boot configuration file, write to an existing backup\n file in an NTFS partition from DOS, reset bad sectors in filesystem etc.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title PTDD Super Fdisk V1.0\n DOS version of EASEUS Partition Manager. Lets you create, format, delete,\n activate and hide partitions, restore/backup partition tables, perform surface\n scan and erase MBR.
+map --mem /ubcd/images/superfd.img.gz (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+
+title Ranish Partition Manager V2.40\n Partition manager for creating, copying and resizing primary and extended\n partitions. It includes command line interface and simulation mode that works\n with large files so you can safely experiment before working on the real hard\n drive partition tables.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title SPFDISK 2000-03v (Special FDISK)\n Partition manager. Boot Manager. Raw mode disk viewer and editor. Disk surface\n scanner.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title XFDISK V0.9.3 beta (Extended FDISK)\n Partition manager and boot Manager. The boot manager is located in the first\n 17 sectors of the first hard disk, and does not require its own partition, so\n you can fully use the four available primary partitions per hard disk.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+

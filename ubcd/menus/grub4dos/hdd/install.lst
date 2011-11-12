@@ -1,0 +1,40 @@
+color cyan/black black/light-gray green/black yellow/black
+
+title ..
+configfile /ubcd/menus/grub4dos/hdd.lst
+
+title Data Lifeguard Tools V11.2 (Western Digital)\n OEM version of Ontrack Disk Manager licensed for Western Digital hard disks.\n Helps partition and format your hard drive automatically. Supports DDO\n (Dynamic Drive Overlay) for older BIOS.
+map --mem /ubcd/images/datalife.img.gz (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+
+title DiscWizard 2003 V10.45.06 (Seagate)\n OEM version of Ontrack Disk Manager licensed for Seagate hard disks. Helps\n partition and format your hard drive automatically. Supports DDO (Dynamic\n Drive Overlay) for older BIOS.
+map --mem /ubcd/images/discwiz.img.gz (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+
+title DiscWizard V11.0.8326 (Seagate/Maxtor)\n OEM version of Acronis TrueImage licensed for Seagate/Maxtor hard disks. Lets\n you prepare a new Seagate/Maxtor disk by cloning from an existing disk. Also\n lets you create an exact image backup of your hard disk, which can be stored\n on CD/DVD-R/RW discs, external USB/Firewire storage devices etc.
+kernel /ubcd/boot/discwiz/kernel.dat /s quiet mbrcrcs=on vga=vesa load_ramdisk=1 prompt_ramdisk=0 ramdisk_size=32000
+initrd /ubcd/boot/discwiz/ramdisk.dat
+map --unmap=0:0xff
+
+title Disk Manager V10.42 (Samsung)\n OEM version of Ontrack Disk Manager licensed for Samsung hard disks. Helps\n partition and format your hard drive automatically. Supports DDO (Dynamic\n Drive Overlay) for older BIOS.
+map --mem /ubcd/images/ssdm.img.gz (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+
+title Disk Manager V9.57 (IBM)\n OEM version of Ontrack Disk Manager licensed for IBM hard disks. Helps\n partition and format your hard drive automatically. Supports DDO (Dynamic\n Drive Overlay) for older BIOS. Also includes older version of DFT that works\n with non-IBM drives.
+map --mem /ubcd/images/ibmdm.img.gz (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+
+title MaxBlast V4.0 (Maxtor)\n OEM version of Ontrack Disk Manager licensed for Maxtor hard disks. Helps\n partition and format your hard drive automatically. Supports DDO (Dynamic\n Drive Overlay) for older BIOS.
+map --mem /ubcd/images/maxblast.img.gz (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+

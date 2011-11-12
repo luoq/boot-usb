@@ -1,0 +1,59 @@
+color cyan/black black/light-gray green/black yellow/black
+
+title ..
+configfile /ubcd/menus/grub4dos/main.lst
+
+title AIDA16 V2.14\n System information and benchmarking tool. Development has been discontinued.\n This is the last version.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title ASTRA V5.50 (Demo version)\n Displays detailed information about your computer hardware and device\n operation modes, including undocumented information. This is a demo version\n with basic hardware and software detection only.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title Hardware Detection Tool V0.5.0\n Displays low-level information for CPU, PCI, video, memory, BIOS, motherboard,\n disks, batteries, enclosures etc.
+map --mem /pmagic/boot/syslinux/hdt.gz (fd0)
+map --hook
+root (fd0)
+chainloader (fd0)+1
+
+title HWiNFO V5.5.2\n Provides comprehensive hardware information with full/short report format.\n Includes system health monitoring function.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title NSSI V0.60.45\n System information and benchmarking tool. Detects computer vendor, model,\n mainboard manufacturer/type/chipset/bus, CPU type/frequency/stepping/name/\n serial number, L1/L2/L3 cache size/type/speed, FPU type/frequency, PCI/AGP/PnP/\n EISA/PCMCIA devices, video card vendor/model/chipset/memory size etc.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title PC-Config V9.33\n Complete hardware detection including CPU type/speed, RAM size, HDD size, VGA\n chip, PCI cards etc. Development has been discontinued. This is the last\n version.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title PCI V1.1\n Allows exploration of PCI/AGP/PCI Express/CardBus/CompactPCI/PCI-X/PCI HotPlug\n etc. hardware at the lowest level.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title PCISniffer V1.5\n Automatically detects which PCI buses and devices are present. You can browse\n the detected devices and list all functions of these devices in a detailed\n display. It also gives you the chance to detect resource conflicts and resolve\n them.
+map --mem /ubcd/images/pcisniffer.img.gz (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+
+title System Speed Test 32 V4.78\n System information and benchmark tool. Detects processor type and clock rate,\n memory size and speed index, BIOS vendor and date etc.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+

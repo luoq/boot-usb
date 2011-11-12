@@ -1,0 +1,91 @@
+color cyan/black black/light-gray green/black yellow/black
+
+title ..
+configfile /ubcd/menus/grub4dos/hdd.lst
+
+title Boot Partition V2.60\n Add additional partitions to the WinNT/2K/XP multi-boot menu (for example, add\n the OS/2 boot manager or a Linux partition).
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title boot.kernel.org (BKO)\n boot.kernel.org (BKO) allows you to boot several linux distributions and other\n tools straight from the internet. Some examples: Debian Live, Ubuntu, Knoppix,\n Fedora Live, Damm Small Linux, NTFS utilities, boot managers, hard disk\n utilities...
+kernel /ubcd/boot/bko/gpxe.lkrn
+map --unmap=0:0xff
+
+title EditBINI V1.01.1\n Edit \BOOT.INI in any NTFS partition.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title GAG (Graphical Boot Manager) V4.10\n Boot manager that supports up to 9 different operating systems in either the\n primary or extended partition. Features include password protection and\n SafeBoot (allows to boot your hard disk even if GAG is accidentally\n overwritten).
+map --mem /ubcd/images/gag.img.gz (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+
+title Gujin V2.8.4\n PC boot loader which can analyze your partitions and filesystems. It finds the\n Linux kernel images available, as well as other bootable partitions (for *BSD,\n MS-DOS, Windows, etc.), files (*.kgz) and bootable disk images (*.bdi), and\n displays a graphical menu for selecting which system to boot.
+map --mem /ubcd/images/gujin.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title MBRtool V2.3.200\n Backup, restore and manipulate hard disk MBR.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title MBRWork V1.08\n Backup/restore first track on hard disk. Install standard MBR. Remove\n EZ-Drive. Edit MBR partition entry values. Recover lost FAT, HPFS, NTFS, and\n extended partitions. Set a partition active. Transfer/copy sectors from disk\n to disk.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title netboot.me\n netboot.me is a service that allows you to boot nearly any operating system or\n utility on any computer with a wired internet connection - without having to\n know ahead of time what you'll want to boot. Once you can netboot.me, you\n never need to update your boot disk again!
+kernel /ubcd/boot/netbootme/netbootme.lkrn
+map --unmap=0:0xff
+
+title PLoP Boot Manager V5.0.12\n Graphical boot manager that is able to launch any OS from harddisk, floppy,\n CD/DVD or from USB (UHCI, OHCI and EHCI). You can start the boot manager from\n floppy, CD, network etc., or install it on your harddisk (no extra partition\n required).
+map --mem /ubcd/images/plpbt.img.gz (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+
+title Smart BootManager V3.7.1\n Boot manager that supports booting from floppy, hard disk and CDROM drives. It\n automatically searches for bootable drives and partitions. Features include\n password protection, boot scheduling, user-configurable themes, keystrokes\n preloading etc.
+map --mem /ubcd/images/sbm.img.gz (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+
+title SPFDISK 2000-03v (Special FDISK)\n Partition manager. Boot Manager. Raw mode disk viewer and editor. Disk surface\n scanner.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title Super Grub Disk V0.9799\n Helps you boot into various operating systems, and optionally installs Grub on\n your hard disk as the default boot manager.
+map --mem /ubcd/images/sgd.img.gz (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+
+title Super Grub2 Disk V1.98s1\n Helps you boot into various operating systems, and optionally installs Grub2\n on your hard disk as the default boot manager.
+map --mem /ubcd/images/sg2d.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title XFDISK V0.9.3 beta (Extended FDISK)\n Partition manager and boot Manager. The boot manager is located in the first\n 17 sectors of the first hard disk, and does not require its own partition, so\n you can fully use the four available primary partitions per hard disk.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title XOSL (Extended Operating System Loader) V1.1.5\n Graphical boot manager with mouse and keyboard support, screen resolution up\n to 1600x1200, user-configurable color schemes, password-protection and a\n maximum of 24 boot items.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+

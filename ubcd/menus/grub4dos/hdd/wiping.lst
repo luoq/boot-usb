@@ -1,0 +1,59 @@
+color cyan/black black/light-gray green/black yellow/black
+
+title ..
+configfile /ubcd/menus/grub4dos/hdd.lst
+
+title Active@ KillDisk Free Edition V4.1.2393\n Wipes out all floppies and hard disk drives completely by secure overwriting\n data on physical level. Free edition includes [One Pass Zeros] method only.\n Supports IDE, SATA and SCSI drives. Supports larger than 128GB hard disks via\n using LBA(LBA48) mode to access drive.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title CopyWipe V1.14\n Utility for copying or wiping entire hard drives. Supports USB and Firewire\n drives. Capable of copying only those areas of the source drive that are in\n use. Supports proportional resizing of partitions (FAT, FAT32, and NTFS) on\n the destination drive.
+map --mem /ubcd/images/copywipe.img.gz (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+
+title Darik's Boot and Nuke 2.2.6 Beta\n Automatically and completely delete the contents of any hard disk that it can\n detect, which makes it an appropriate utility for bulk or emergency data\n destruction.
+map --mem /ubcd/images/dban.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title Fujitsu Erase Utility V1.00\n Low-level format utility for Fujitsu IDE/ATA HDDs. It erases all of your\n previous data and reinitializes it to "00" pattern.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title HDDErase V4.0\n Securely erases all data on ATA hard disk drives. It offers the option to run\n the drive internal secure erase command, security erase unit, based on the ATA\n specification by the T13 technical committee.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title HDShredder V3.8.1 (Free Edition)\n Wipes hard disks and other storage media. Supports IDE/ATA/SATA/SATA II/\n eSATA(AHCI)/USB 1.1(UHCI,OHCI)/USB 2.0(EHCI)/CF via IDE/Fireware(OHCI)/SCSI.\n Free Edition erases whole drive only (no partition-level support). Erase speed\n is limited to 6 GB/min, and erasure method is limited to the default.
+map --mem /ubcd/images/hdshredder.img.gz (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+
+title MAXLLF V1.1 (Maxtor)\n Low-Level format utility designed to return the surface of the media to\n manufacturing specifications and format the hard drive as it was shipped from\n the factory.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+
+title PC INSPECTOR e-maxx V0.95\n Hard disk wiper with direct DMA support, with speeds up to 3.3GB/min via\n optimal utilization of the DMA chipset on PC motherboards with supported\n chipsets.
+map --mem /ubcd/images/emaxx.img.gz (fd0)
+map --hook
+chainloader (fd0)+1
+rootnoverify (fd0)
+
+title SUTIL V1.01 (Samsung)\n Low-level format utility for specific Samsung hard drives: SpinPoint V20400,\n V15300, V10200, V9100 etc. For other models, use ES-Tool instead.
+map --mem /ubcd/images/fdubcd.iso.gz (hd32)
+map --hook
+root (hd32)
+chainloader (hd32)
+

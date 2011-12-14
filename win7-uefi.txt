@@ -1,0 +1,28 @@
+1. Prepare boot usb
+	1.	format usb key to fat32(If it has two partitions,uefi will not work here)
+	2.	cp windows iso files to this partition
+	3.	extract bootmgfw.efi from file sources\install.wim
+			7z e sources/install.wim 1/Windows/Boot/EFI/bootmgfw.efi
+	4.	mkdir efi/boot && mv bootmgfw.efi efi/boot/bootx64.efi
+2.	Install
+	1.	plugin usb key and start with bios set uefi on and boot
+	2.	If windows gives "缺少需要的的CD/DVD设备驱动程序" error.Cancel install,remove and plugin usb key,then continue.[6]
+	3.	When come to partition,fire up command prompt and execute diskpart
+			list disk
+			select disk 0 #assume this it what you want
+			convert gpt # new gpt not work
+			create partition efi size=512#grub2 requires it to be >= 200M.[7]
+			create partition msr size=128
+			create partition primary size=23552
+	4.	continue install and finish
+
+See [1] for a blog,[2] for how to extract wim file,[3] for some explanation of uefi,[4,5] for windows and gpt,
+
+Reference:
+1.	http://jake.io/b/2011/installing-windows-7-with-uefi-boot-on-an-x220-from-usb/
+2.	http://askubuntu.com/questions/34474/how-do-i-handle-wim-image-files
+3.	https://wiki.archlinux.org/index.php/Unified_Extensible_Firmware_Interface9
+4.	http://msdn.microsoft.com/en-us/windows/hardware/gg463525#X-201104111922443
+5.	http://www.tomshardware.com/reviews/intel-uefi-firmware,2486-7.html
+6.	http://hi.baidu.com/lxjinfo/blog/item/c3ec0e3bffda71f614cecb60.html
+7.	https://wiki.archlinux.org/index.php/Unified_Extensible_Firmware_Interface#Creating_a_UEFI_SYSTEM_PARTITION_in_Linux

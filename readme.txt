@@ -1,8 +1,9 @@
 This directory contains the syslinux config file for a bootable usb.
 UBCD[1],pmagic[2],gentoo live dvd[3] and windows 7[4] are included.
-win7 iso can also be booted using efi(at least in Thinkpad x220).
+win7 iso can also be booted using uefi (at least in Thinkpad x220).
 
-The structure is based on ubcd.Parted magic iso is extracted to pmagic,
+The structure is based on that of ubcd.The main entry is
+boot/syslinux/syslinux.cfg.Parted magic iso is extracted to pmagic,
 gentoo lived is in gentoo,windows is extracted in root level.Config file
 for syslinux are changed accordingly.
 

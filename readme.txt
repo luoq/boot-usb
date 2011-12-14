@@ -7,6 +7,8 @@ gentoo lived is in gentoo,windows is extracted in root level.Config file
 for syslinux are changed accordingly.
 
 NOTE:The empty file livecd in top dir is needed.
+NOTE:The config are changed only to satisfy my need.Some entries are not
+usable unless changed accordingly..
 
 1. http://www.ultimatebootcd.com/ ubcd511.iso
 2. http://partedmagic.com/doku.php pmagic-11.11.11.iso (x86-64)

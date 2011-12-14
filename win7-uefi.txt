@@ -7,6 +7,8 @@
 2.	Install
 	1.	plugin usb key and start with bios set uefi on and boot
 	2.	If windows gives "缺少需要的的CD/DVD设备驱动程序" error.Cancel install,remove and plugin usb key,then continue.[6]
+		Make sure your usb has only one partition,or some extra cares must be
+		taken.
 	3.	When come to partition,fire up command prompt and execute diskpart
 			list disk
 			select disk 0 #assume this it what you want
